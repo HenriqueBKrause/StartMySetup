@@ -1,0 +1,53 @@
+# cd ~
+sudo apt update
+sudo apt upgrade -y
+
+# Google Chrome Web Browser
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+rm -r ./google-chrome-stable_current_amd64.deb
+
+
+#spotify
+sudo apt install spotify
+
+#discord 
+sudo apt install discord
+
+
+
+
+# git 
+sudo apt-get -y install dh-autoreconf libcurl4-gnutls-dev libexpat1-dev \
+  gettext libz-dev libssl-dev
+sudo apt-get -y install asciidoc xmlto docbook2x
+sudo apt-get -y install install-info
+cd /tmp
+curl -o git.tar.gz https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.31.1.tar.gz
+tar -zxf git.tar.gz
+cd git-2.31.1
+make configure
+./configure --prefix=/usr
+make all doc info
+sudo make install install-doc install-html install-info
+git init  
+git config --global user.name "HenriqueKrause"
+git config --global user.emal "henriquebkrause2312@gmail.com"
+
+# Node js (14.x)
+curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt -y install nodejs
+sudo apt -y install build-essential
+
+# GCC compiler
+alias comp='f(){ gcc "$1".c -o "$1"; unset -f f; }; f' 
+alias compr='f(){ gcc "$1".c -o "$1"; ./"$1"; unset -f f; }; f'
+
+
+#zshell
+sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+ZSH_THEME = “spaceship"
+
