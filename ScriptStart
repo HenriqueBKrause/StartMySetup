@@ -51,3 +51,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ZSH_THEME = “spaceship"
 
+/etc/passwd       //agr altere no usuario bin/bash para bin/zsh
