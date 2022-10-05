@@ -1,5 +1,5 @@
 # cd ~
-sudo apt update
+sudo apt update -y
 sudo apt upgrade -y
 
 # Google Chrome Web Browser
@@ -9,12 +9,13 @@ rm -r ./google-chrome-stable_current_amd64.deb
 
 
 #spotify
-sudo apt install spotify
+sudo apt install spotify   #melhor instalar pela loja 
 
 #discord 
-sudo apt install discord
+sudo apt install discord    #melhor instalar pela lojaz
 
-
+#vscode 
+sudo apt install code
 
 
 # git 
@@ -40,15 +41,25 @@ sudo bash nodesource_setup.sh
 sudo apt -y install nodejs
 sudo apt -y install build-essential
 
-# GCC compiler
-alias comp='f(){ gcc "$1".c -o "$1"; unset -f f; }; f' 
-alias compr='f(){ gcc "$1".c -o "$1"; ./"$1"; unset -f f; }; f'
-
 
 #zshell
 sudo apt install zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo apt install curl
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-ZSH_THEME = “spaceship"
+# Instalar Zsh Autosuggestions
+# https://github.com/zsh-users/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-/etc/passwd       //agr altere no usuario bin/bash para bin/zsh
+# Instalar Zsh Syntax Highlighting
+# https://github.com/zsh-users/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+
+# instalar o dracyla no zsh
+git clone https://github.com/dracula/zsh.git
+ln -s $DRACULA_THEME/dracula.zsh-theme $OH_MY_ZSH/themes/dracula.zsh-theme
+
+#Go to your ~/.zshrc file and set ZSH_THEME="dracula".
+
+
