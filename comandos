@@ -1,0 +1,49 @@
+#Instalação do git:
+sudo apt-get install git
+
+git config --global user.name "HenriqueKrause"
+
+git config --global user.email "henriquebkrause2312@gmail.com"
+
+#para clonar um repositorio:
+
+git clone "url"
+
+#Adicionando remoto:
+git remote add oririgin "url"
+
+#Primeiro commit:
+git add .
+git commit -m "mensagem desejada"
+git branch -m  main
+git push -u origin main  
+
+#Outros commits
+git add .
+git commit -m "mensagem desejada"
+git push
+
+--------------------------___"_----------------------------------------"_------------------------------------"_-------------------
+
+
+#comandos de git alternativos:
+
+=> Compilador em c :
+gcc nome.c -o nome 
+
+=>rodar o programa compilado:
+./nome
+
+=> git comandos alternativos:
+
+git status (verifica se tem arquivos para commitar)
+
+git checkout -- meu_arquivo.txt (desfaz as alterações do arquivo não estiver adicionado)
+
+git reset HEAD meu_arquivo.txt (desfaz as alterações do arquivo se ja tiver adicionado)
+
+git remote show origin (verifica se o repositorio remoto está configurado)
+
+git pull (atualiza o repositorio local com o remoto)
+
+
